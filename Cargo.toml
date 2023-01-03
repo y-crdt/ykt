@@ -1,0 +1,23 @@
+[package]
+name = "ykt"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace]
+
+[dependencies]
+lib0 = "0.14.1" # must match yrs version
+thiserror = "1.0.38"
+uniffi = "0.22.0"
+uniffi_macros = "0.22.0"
+yrs = "0.14.1"
+
+[build-dependencies]
+uniffi_build = "0.22.0"
+
+[lib]
+name = "uniffi_ykt"
+path = "src/main/rust/lib.rs"
+crate-type = ["cdylib"]
